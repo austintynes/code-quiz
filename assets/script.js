@@ -1,7 +1,11 @@
 let question = document.querySelector(".question")
 let time = document.querySelector(".time")
 let next = document.querySelector(".next")
-let secondsLeft = 5;
+let answerA = document.querySelector(".a")
+let answerB = document.querySelector(".b")
+let answerC = document.querySelector(".c")
+let answerD = document.querySelector(".d")
+
 // question one: What is Iron Man's real name?
 // Tony Stark, Bruce Wayne, Oliver Queen, Peter Parker
 // question two: What city does Green Arrow live in?
@@ -12,8 +16,7 @@ let secondsLeft = 5;
 // Peter tingle, spider-sense, The 6th sense, Hyper-sense
 // question five: What is Dr. Dooms real name?
 // Victor Von Doom, Paul Potter, Julian Jackson, David Doom
-onQuestionNum = 0;
-timeLeft = 30;
+
 let questions = ["What is Iron Man's real name?", "What city does Green Arrow live in?", "How tall is (Comic Book) Superman?", "In the MCU, what does Aunt May(RIP) call Spidermans 'Spidey-sense'?", "What is Dr. Dooms real name?"];
 
 let answerChoices = [{a: "Peter Parker", b: "Bruce Wayne", c: "Tony Stark", d: "Oliver Queen"},
@@ -22,18 +25,108 @@ let answerChoices = [{a: "Peter Parker", b: "Bruce Wayne", c: "Tony Stark", d: "
 {a: "Spider-sense", b: "The 6th sense", c: "Hyper-sense", d: "Peter-tingle"},
 {a: "David Doom", b: "Victor Von Doom", c: "Paul Plotter", d: "Julian Jackson"}
 ]
+
+onQuestionNum = 0;
+timeLeft = 5;
 console.log(questions[2])
-console.log(answerChoices[3].d);
+console.log(onQuestionNum)
+
+function main() {
+  quizQuestions();
+  dynamicAnswers();
+  nextQuestion();
+  buttonDiff();
+  setTime();
+}
+
+function buttonDiff() {
+if (onQuestionNum <= 3) {
+  document.querySelector(".next").textContent = "NEXT";
+} else {
+document.querySelector(".next").textContent = "SUBMIT";
+}
+}
+
+/*function answers() {
+  if (onQuestionNum === 0) {
+    let a = answerChoices[0].a
+
+  }
+  return;
+}*/
+
+function dynamicAnswers() {
+if (onQuestionNum === 0) {     //question 1
+  let a = answerChoices[0].a
+  answerA.textContent = a
+  let b = answerChoices[0].b
+  answerB.textContent = b
+  let c = answerChoices[0].c
+  answerC.textContent = c
+  let d = answerChoices[0].d
+  answerD.textContent = d
+} else if (onQuestionNum === 1) {   //question 2
+  let a = answerChoices[1].a
+  answerA.textContent = a
+  let b = answerChoices[1].b
+  answerB.textContent = b
+  let c = answerChoices[1].c
+  answerC.textContent = c
+  let d = answerChoices[1].d
+  answerD.textContent = d
+} else if (onQuestionNum === 2) {    //question 3
+  let a = answerChoices[2].a
+  answerA.textContent = a
+  let b = answerChoices[2].b
+  answerB.textContent = b
+  let c = answerChoices[2].c
+  answerC.textContent = c
+  let d = answerChoices[2].d
+  answerD.textContent = d
+} else if (onQuestionNum === 3) {    //question 4
+  let a = answerChoices[3].a
+  answerA.textContent = a
+  let b = answerChoices[3].b
+  answerB.textContent = b
+  let c = answerChoices[3].c
+  answerC.textContent = c
+  let d = answerChoices[3].d
+  answerD.textContent = d
+} else if (onQuestionNum === 4) {    //question 5
+  let a = answerChoices[4].a
+  answerA.textContent = a
+  let b = answerChoices[4].b
+  answerB.textContent = b
+  let c = answerChoices[4].c
+  answerC.textContent = c
+  let d = answerChoices[4].d
+  answerD.textContent = d
+} 
+}
+
+
+
+
+
+
+
 
 function setTime() {
-let timerInterval = setInterval(function() {
-  timeLeft--;
-  timerInterval.textContent = timeLeft + " SECONDS LEFT..."
-}, 1000);
+  if (timeLeft > 0) {
+    let timerInterval = setInterval(function() {
+      timeLeft--;
+      time.textContent = timeLeft + " SECONDS LEFT...";
+      
+      if (timeLeft === 0) {
+        clearInterval(timerInterval);
+      }
+    }, 1000);
+  }
 }
 
 
   function quizQuestions() {
+
     if (onQuestionNum === 0) {
       let q1 = questions[0];
       question.textContent = q1;
@@ -53,32 +146,23 @@ let timerInterval = setInterval(function() {
     return;
   };
 
-  for (let i = 0; i > 0; i--) {
-    quizQuestions
-  } 
+  for (let onQuestionNum = 0; onQuestionNum <= questions.length; onQuestionNum++) {
+
+  }
 
 
+  function clickButton() {
+    if(next) {
+      next.addEventListener("click", function() {
+        
+    })
+  }
+  };
 
+function nextQuestion() {
+  if(next || timeLeft === 0) {
+    onQuestionNum++;
+}
+};
 
-
-  setTime();
-  quizQuestions();
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+main();
