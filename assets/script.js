@@ -117,8 +117,6 @@ function showCodeQuiz() {
 const startButton = document.querySelector(".begin");
 startButton.addEventListener("click", showCodeQuiz);
 
-// Dynamic question & answer logic
-
 
 // Question & answer display logic
 if ((codeQuiz.style.display = "block" && questionCounter === 0)) {

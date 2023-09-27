@@ -41,24 +41,24 @@ div ol {
 
 main {
   display: flex;
-  justify-content: center; /* Center horizontally within the viewport */
-  align-items: center; /* Center vertically within the viewport */
-  height: 100vh; /* Make the main element fill the viewport height */
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
 .center-container {
   display: flex;
-  flex-direction: column; /* Stack sections vertically */
-  align-items: center; /* Center sections horizontally within main */
+  flex-direction: column; 
+  align-items: center;
 }
 
 
 .codeQuiz {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  height: 100vh; /* Make the section fill the viewport height */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
 .code body main {
