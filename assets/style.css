@@ -1,45 +1,80 @@
 * {
-    font-family:Georgia, 'Times New Roman', Times, serif
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-nav  {
-    display: flex;
-justify-content: flex-start;
-align-items: flex-end;
-padding-top: 50px;
-padding-left: 20px;
-padding-bottom: 10px;
-margin-top: 25px;
-margin-bottom: 25px;
-background-color: aqua;
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: aqua;
 }
 
 nav a {
-text-decoration: none;
-color: black;
-font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
 main h1 {
-background-color: antiquewhite;
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 60px;
+  background-color: antiquewhite;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 60px;
 }
 
-body main{
-    display: flex;
-    justify-content: center;
-border: solid 2px gray;
-padding: 50px;
+.startScreen {
+  display: flex;
+  justify-content: center;
+  height: 10%;
+  background-color: aqua;
+}
+
+div ol {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center; /* Center horizontally within the viewport */
+  align-items: center; /* Center vertically within the viewport */
+  height: 100vh; /* Make the main element fill the viewport height */
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center; /* Center sections horizontally within main */
+}
+
+
+.codeQuiz {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Make the section fill the viewport height */
+}
+
+.code body main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  padding: 50px;
 }
 
 main section {
-    width: 80%;
+  width: 80%;
 }
 
 .question {
-    background-color: azure;
+  background-color: azure;
 }
 section div {
   display: flex;
@@ -48,15 +83,22 @@ section div {
 }
 
 section ol {
-    padding-top: 60px;
-    margin-right: 100px;
-    background-color: beige;
+  padding-top: 60px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-ol li {
-    padding-top: 10px;
-    padding-bottom: 10px;
+ol .a,
+.b,
+.c,
+.d {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: silver;
+  border-radius: 20%;
 }
-
-
-

@@ -12,24 +12,26 @@
       <a href="#highscores">VIEW HIGH SCORES</a>
     </nav>
     <main>
-      <section class="start-screen">Start screen</section>
-      <section>
-
-        <h1>Code Quiz</h1>
-        <p class="time"></p>
-        <div class="question">
-            <p></p>
-        </div>
-        <ol>
-          <li class="a"></li>
-          <li class="b"></li>
-          <li class="c"></li>
-          <li class="d"></li>
-        </ol>
-        <button class="next"></button>
-      </section>
+      <div class="center-container">
+        <section class="startScreen">
+          <button class="begin">BEGIN THE GAME</button>
+        </section>
+        <section class="codeQuiz">
+          <h1>Code Quiz</h1>
+          <p class="time"></p>
+          <div class="question"></div>
+          <span>
+          <ol id="choices">
+            <button class="a"><li></li></button>
+            <button class="b"><li></li></button>
+            <button class="c"><li></li></button>
+            <button class="d"><li></li></button>
+          </ol></span>
+          <button class="submit"></button>
+        </section>
+      </div>
     </main>
-    
+
     <script src="./assets/script.js"></script>
   </body>
 </html>
