@@ -102,3 +102,7 @@ ol .a,
   background-color: silver;
   border-radius: 20%;
 }
+
+.choices {
+  list-style-type: none;
+}

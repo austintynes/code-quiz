@@ -1,12 +1,13 @@
 let question = document.querySelector(".question");
 let time = document.querySelector(".time");
 let submit = document.querySelector(".submit");
-let begin = document.querySelector(".begin");
 let answerA = document.querySelector(".a");
 let answerB = document.querySelector(".b");
 let answerC = document.querySelector(".c");
 let answerD = document.querySelector(".d");
+let questionCounter = 0;
 
+let newBackground = document.querySelector(".codeQuiz");
 // question one: What is Iron Man's real name?
 // Tony Stark, Bruce Wayne, Oliver Queen, Peter Parker
 // question two: What city does Green Arrow live in?
@@ -17,6 +18,7 @@ let answerD = document.querySelector(".d");
 // Peter tingle, spider-sense, The 6th sense, Hyper-sense
 // question five: What is Dr. Dooms real name?
 // Victor Von Doom, Paul Potter, Julian Jackson, David Doom
+
 
 let qA = [
   {
@@ -74,6 +76,8 @@ const codeQuiz = document.querySelector(".codeQuiz");
 function showStartScreen() {
   startScreen.style.display = "block";
   codeQuiz.style.display = "none";
+  
+  
 }
 // Submit button logic
 submit.style.display = "none";
@@ -110,11 +114,11 @@ function showCodeQuiz() {
   return;
 }
 // On begin Button Event listener
-const beginButton = document.querySelector(".begin");
-beginButton.addEventListener("click", showCodeQuiz);
+const startButton = document.querySelector(".begin");
+startButton.addEventListener("click", showCodeQuiz);
 
 // Dynamic question & answer logic
-let questionCounter = 0;
+
 
 // Question & answer display logic
 if ((codeQuiz.style.display = "block" && questionCounter === 0)) {
@@ -151,13 +155,24 @@ if ((codeQuiz.style.display = "block" && questionCounter === 0)) {
 
 // Next question Logic
 function nextQuestion() {
-  for (let questionCounter = 0; questionCounter < qA.length; questionCounter++) {
-  questionCounter++;
+  let questionCounter = 0;
+  if (questionCounter < qA.length) {
+
+    questionCounter++;
   }
 }
 
-const selected = document.querySelector("<span>");
-selected.addEventListener("click", nextQuestion);
+
+const selected = document.querySelector(".choices");
+selected.addEventListener("click", function() {
+  
+})
+
+
+
+
+
+
 
 
 
